@@ -1,188 +1,118 @@
 body {
-    background-color: black;
-    padding: 0px 75px 0px 75px;
-}
-
-/*  .content {
-display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: ;
-    column-gap: 16px;
-    grid-template-areas: "xyz";
-    margin-top: 3vh;
-    padding-bottom: 2vh;
-    border-bottom: #FFBB25;
-    border-style: dotted;
-    border-width: 1px;
-
-}   */
-
-.gridBlocks {
-    display: flex;
-    justify-content: start;
-}    
-
-a {
-    color: #D8D2C3;
-}
-
-a:hover {
-    color: dimgray;
-}
-
-.myButton {
-    background-color: #FFBB25;
-    font-family: "Iowan Old Style";
-    font-size: 1.7vmin;
-    --bs-btn-bg: dimgray;
-    --bs-btn-border-color: dimgray;
-    --bs-btn-hover-bg: dimgray;
-    --bs-btn-hover-border-color: dimgray;
-    color: #55534C;
+  background-color: black;
+  padding: 0px 75px 0px 75px;
 }
 
 p {
-    color: var(--Lt-warm-grey, #D8D2C3);
-    font-family: "Iowan Old Style";
-    font-size: 1.7vmin;
-    font-style: normal;
-    font-weight: 400;
+  color: #D8D2C3;
+  font-family: "Iowan Old Style";
+  font-size: 1.7vmax;
+  font-style: normal;
+  font-weight: 400;
 }
 
 h1 {
-    color: var(--Tangerine, #FFBB25);
-    font-family: "Mrs Saint Delafield";
-    font-size: var(--H1, 5vw);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 80%; /* 96px */
-    text-align: center;
-    margin: 0;
+  color: #FFBB25;
+  font-family: "Mrs Saint Delafield";
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 400;
+  /*     line-height: 80%; /* 96px */
+  text-align: start;
 }
 
 h2 {
-    color: var(--White, #FFF);
-    font-family: Uncial Antiqua;
-    font-size: 3.5vh;
-    font-style: normal;
-    display: inline;
+  color: white;
+  font-family: "Uncial Antiqua";
+  font-size: 3.5vw;
+  font-style: normal;
+  display: inline;
+  /*     line-height: 0%; */
+  overflow-wrap: break-word;
 }
 
 h3 {
-    color: var(--Tangerine, #FFBB25);
-    font-family: Bellefair;
-    font-size: var(--h3, 3vh);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100%; /* 28px */
-    margin: auto;
-    text-align: left;
+  color: #FFBB25;
+  font-family: "Bellefair";
+  font-size: 3vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 28px */
+  /*     margin: auto; */
+  text-align: left;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    list-style-image: url(../images/bullet1.svg);
- }
- 
-li {
-     padding: 10px 20px 20px 20px;
-     flex-direction: column;
-    align-self: flex-start;
-     gap: 5px;
-    flex: 1 0 0;
+.myNav {
+  margin: 0;
+  padding: 0;
+  padding-top: 2vh;
+  flex-direction: row;
+}
+
+.myTopContainer {
+  margin: 0;
+  padding: 0;
+  padding-top: 3vh;
+}
+
+li p {
+  color: #AEAEAE;
+  font-family: "Iowan Old Style";
+  font-size: 1.5vmax;
+}
+
+.standardUL {
+  display: flex;
+  /*     flex-direction: column; */
+  justify-content: flex-end;
+  align-items: flex-start;
+  list-style-image: url(../images/bullet1.svg);
+}
+
+.standardUL li {
+  padding: 10px 20px 20px 20px;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 5px;
+  flex: 1 0 0;
+}
+
+.myButton {
+  font-family: "Bellefair";
+  background-color: #FFBB25;
+  color: #55534C;
+  border-color: #D8D2C3;
+}
+
+.myNav a {
+  font-family: "Bellefair";
+  font-size: 2vw;
+  color: #FFBB25;
+}
+
+.myNav a:active {
+  color: #AEAEAE;
+}
+
+.myButton:hover {
+  background-color: #55534C;
+  color: #D8D2C3;
+  border-color: #FFBB25;
+}
+
+.myNav a:hover {
+  color: #55534C;
+  background-color: #FFBB25;
 }
 
 .myCardSmol {
-    --bs-card-bg: #55534C;
+  background-color: #55534C;
 }
 
-.h3Title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.myDropdownItem a {
+  color: #55534C;
 }
 
-#pageHeader { 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    column-gap: 16px;
-    row-gap: 4vh;
-    grid-template-areas: "secTitle pTitle pTitle pTitle pTitle pTitle . . . . . ."
-         ". . . su su text1 text1 text1 text1 bull bull bull"
-         ". . . su su text1 text1 text1 text1 bull bull bull";
-    margin-top: 3vh;
-    padding-bottom: 1vh;
-/*     border-bottom: #FFBB25;
-    border-style: dotted;
-    border-width: 1px; */
-    }   
- 
-    
-#pageContext {
-    grid-area: secTitle;
-    align-items: start;
-    height: 6vh;
-} 
-
-#pageTitle {
-    grid-area: pTitle;
-    align-self: end;
-}
-
-#summary {
-    grid-area: su;
-    overflow-wrap: anywhere;
-}
-
-#suTxt1 {
-    grid-area: text1;
-    flex-direction: column;
-}
-
-#headBullets {
-    grid-area: bull;
-}
-
-#imageSummaryTitle {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: ;
-    column-gap: 16px;
-    grid-template-areas: "t2 t2 . . . . . . . . . .";
-/*     margin-top: 3vh; */
-    padding-bottom: 2vh;
-    }  
-
-#imgSuTi {
-    grid-area: t2;
-}
-
-#protoCarousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 16px;
-    grid-template-areas: ". caro caro caro . text text text text text text .";
-/*  margin-top: 3vh; */
-    padding-bottom: 2vh;
-    border-bottom: #FFBB25;
-    border-style: dotted;
-    border-width: 1px;
-/*  max-height: 50vh; */
-} 
-
-#protoCarousel2 {
-    grid-area: caro;
-    width: 100%;
-
-}
-
-#caroText {
-    grid-area: text;
-    align-content: space-between;
-    flex-wrap: wrap;
-}
-
+.myDropdownItem a:hover {
+  background-color: #FFBB25;
+}/*# sourceMappingURL=style.css.map */

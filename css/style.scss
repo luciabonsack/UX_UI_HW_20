@@ -1,0 +1,152 @@
+$bg-color: black;
+$tangerine: #FFBB25;
+$lt-smoke-grey: #D8D2C3;
+$md-grey: #AEAEAE;
+$dk-smoke-grey: #55534C;
+
+$h1-font: "Mrs Saint Delafield";
+$display-font: "Uncial Antiqua";
+$h3-font: "Bellefair";
+$p-font: "Iowan Old Style";
+
+$h1-size: 5vw;
+$h2-size: 3.5vw;
+$h3-size: 3vw;
+$h4-size: 2.4vw;
+$h5-size: 2vw;
+$p-size: 1.7vmax;
+$sm-P-size: 1.5vmax;
+
+$container-top-pad: 3vh;
+
+
+@mixin my-grid {
+$grid-gutter-width: 16px;
+$bs-gutter-x: 0;
+margin: 0;
+padding: 0;
+}
+
+@mixin my-ul {
+    display: flex;
+/*     flex-direction: column; */
+    justify-content: flex-end;
+    align-items: flex-start;
+    list-style-image: url(../images/bullet1.svg);
+}
+
+@mixin my-li {
+    padding: 10px 20px 20px 20px;
+    flex-direction: column;
+   align-self: flex-start;
+    gap: 5px;
+   flex: 1 0 0;
+}
+
+body {
+    background-color: $bg-color;
+    padding: 0px 75px 0px 75px;
+}
+p {
+    color: $lt-smoke-grey;
+    font-family: $p-font;
+    font-size: $p-size;
+    font-style: normal;
+    font-weight: 400;
+}
+h1 {
+    color: $tangerine;
+    font-family: $h1-font;
+    font-size: $h1-size;
+    font-style: normal;
+    font-weight: 400;
+/*     line-height: 80%; /* 96px */ 
+    text-align: start;
+}
+h2 {
+    color: white;
+    font-family: $display-font;
+    font-size: $h2-size;
+    font-style: normal;
+    display: inline;
+/*     line-height: 0%; */
+    overflow-wrap: break-word;
+}
+
+h3 {
+    color: $tangerine;
+    font-family: $h3-font;
+    font-size: $h3-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 28px */
+/*     margin: auto; */
+    text-align: left;
+}
+
+
+.myNav {
+    @include my-grid;
+    padding-top: 2vh;
+    flex-direction: row;
+}
+
+.myTopContainer {
+    @include my-grid();
+    padding-top: $container-top-pad;
+}
+
+li p {
+    color: $md-grey;
+    font-family: $p-font;
+    font-size: $sm-P-size;
+}
+
+.standardUL {
+    @include my-ul();
+}
+
+.standardUL li {
+    @include my-li();
+}
+
+.myButton {
+    font-family: $h3-font;
+    background-color: $tangerine;
+    color: $dk-smoke-grey;
+    border-color: $lt-smoke-grey;
+}
+
+.myNav a {
+    font-family: $h3-font;
+    font-size: $h5-size;
+    color: $tangerine;
+}
+
+.myNav a:active {
+    color: $md-grey;
+}
+
+.myButton:hover {
+    background-color: $dk-smoke-grey;
+    color: $lt-smoke-grey;
+    border-color: $tangerine;
+}
+
+
+.myNav a:hover {
+    color: $dk-smoke-grey;
+    background-color: $tangerine;
+}
+
+.myCardSmol {
+    background-color: $dk-smoke-grey;
+}
+
+.myDropdownItem a {
+    color: $dk-smoke-grey;
+}
+
+.myDropdownItem a:hover {
+    background-color: $tangerine;
+}

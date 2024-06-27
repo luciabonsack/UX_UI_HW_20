@@ -15,43 +15,54 @@
         <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
     </head>
     <body>
-       <!-- Header block --> 
-        <div id="pageHeader">
-            <div class="gridBlocks" id="pageContext">
-                <p>Case study</p>
-            </div>
-            <div class="gridBlocks" id="pageTitle">
-                <h1>Mobile Travel app design</h1>
-            </div>
-            <div class="gridBlocks" id="summary">
-                <h2>Summary</h2>
-            </div>
-            <div class="gridBlocks" id="suTxt1">
-                <p>Designed a mobile travel app to <font color="#FFBB25">help travelers with specific health and/or identity needs</font> more easily find places at their destination (via crowd-sourced reviews from other travelers with overlapping needs) where they feel safe and able to immerse themselves.</p>
-                <a class="btn btn-primary myButton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    More info</a>
-                    <div class="collapse" id="collapseExample">
-                        <div class="card card-body myCardSmol">
-                        <p>Examples: travelers who are immunocompromised, have disabilities, chronic illness, allergies, specific identities or characteristics, etc that may cause challenges or safety concerns while traveling.</p>
-                        </div>
-                      </div>
-            </div>
-            <div class="gridBlocks" id="headBullets">
-                <ul>
-                    <li><p>Executed independently within 5 weeks</p></li>
-                    <li><p>Used Figma, Figjam, Google docs, Procreate, and Photoshop</p></li>
+        <!-- Nav from bootstrap-->
+        <div class="container myNav">
+            <ul class="nav nav-tabs justify-content-end">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Case studies</a>
+                <ul class="dropdown-menu myDropdownItem">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
                 </ul>
-            </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Page options</a>
+                    <ul class="dropdown-menu myDropdownItem">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                    </li>
+            </ul>
         </div>
-        <!-- Header image block -->
-        <div id="imageSummaryTitle">
-            <div class="gridBlocks" id="imgSuTi">
-                <h3>Assignment</h3>
-            </div>
-        </div>
+       <!-- Header block --> 
 
-        <div id="protoCarousel">
-            <div class="gridBlocks" id="protoCarousel2">
+       <div class="container myTopContainer">
+        <div class="row">
+          <div class="col-1">
+            <p>Case study</p>
+          </div>
+          <div class="col-5">
+            <h1>Mobile Travel app design</h1>
+          </div>
+<!--           <div class="col">
+            3 of 3
+          </div> -->
+        </div>
+      </div>
+
+      <div class="container myTopContainer">
+        <div class="row">
+          <div class="col-3">
+            <p><div class="gridBlocks" id="protoCarousel2">
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -73,7 +84,38 @@
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
+            </div></p>
+          </div>
+          <div class="col-2">
+            <h2>Summary</h2>
+          </div>
+          <div class="col-4">
+            <p>Designed a mobile travel app to <font color="#FFBB25">help travelers with specific health and/or identity needs</font> more easily find places at their destination (via crowd-sourced reviews from other travelers with overlapping needs) where they feel safe and able to immerse themselves.</p>
+            <a class="btn btn-primary myButton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                More info</a>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body myCardSmol">
+                    <p>Examples: travelers who are immunocompromised, have disabilities, chronic illness, allergies, specific identities or characteristics, etc that may cause challenges or safety concerns while traveling.</p>
+                    </div>
+                  </div>
+          </div>
+          <div class="col-3 standardUL">
+            <ul>
+                <li><p>Executed independently within 5 weeks</p></li>
+                    <li><p>Used Figma, Figjam, Google docs, Procreate, and Photoshop</p></li>
+          </div>
+        </div>
+      </div>
+
+        <!-- Header image block -->
+        <div id="imageSummaryTitle">
+            <div class="gridBlocks" id="imgSuTi">
+                <h3>Assignment</h3>
             </div>
+        </div>
+
+        <div id="protoCarousel">
+
             <div class="gridBlocks" id="caroText">
                 <ul>
                     <li>
