@@ -14,8 +14,9 @@ $h2-size: 3.5vw;
 $h3-size: 3vw;
 $h4-size: 2.4vw;
 $h5-size: 2vw;
-$p-size: 1.7vmax;
-$sm-P-size: 1.5vmax;
+$p-size: 1.5vw;
+$sm-P-size: 1.6vmax;
+$img-fill: 100%;
 
 $container-top-pad: 3vh;
 
@@ -36,11 +37,17 @@ padding: 0;
 }
 
 @mixin my-li {
-    padding: 10px 20px 20px 20px;
+    padding: 1em 1em 2em 1em;
     flex-direction: column;
    align-self: flex-start;
     gap: 5px;
    flex: 1 0 0;
+}
+
+@mixin my-tab {
+    font-family: $h3-font;
+    font-size: $h5-size;
+    color: $tangerine;
 }
 
 body {
@@ -103,11 +110,11 @@ li p {
 }
 
 .standardUL {
-    @include my-ul();
+    list-style-image: url(../images/bullet1.svg);
 }
 
 .standardUL li {
-    @include my-li();
+    padding-left: 1em;
 }
 
 .myButton {
@@ -118,9 +125,7 @@ li p {
 }
 
 .myNav a {
-    font-family: $h3-font;
-    font-size: $h5-size;
-    color: $tangerine;
+ @include my-tab();
 }
 
 .myNav a:active {
@@ -149,4 +154,104 @@ li p {
 
 .myDropdownItem a:hover {
     background-color: $tangerine;
+}
+
+#protoCarousel2 {
+    padding-top: calc($h2-size + $h2-size);
+}
+
+.realMyTab {
+    font-family: $display-font;
+    font-size: $h3-size;
+    color: $tangerine;
+}
+
+.realMyTab button {
+    color: $tangerine;
+}
+
+.myImage img {
+    width: $img-fill;
+    padding: 2em;
+}
+
+.shiftOpacity {
+    opacity: 60%;
+}
+
+.subSection {
+    padding-top: $container-top-pad;
+}
+
+/* Footer formatting */
+.contact {
+    width: 100%;
+    padding-top: 4vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 70%;
+    column-gap: 16px;
+    grid-template-areas: "header header header header header header header header header . . ."
+                        ". . . socials socials socials . quill quill . . .";
+}
+
+.contactGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cTitle {
+    grid-area: header;
+    min-height: fit-content;
+    padding-bottom: 1vh;
+}
+
+#cQuill {
+    grid-area: quill;
+}
+
+#cText {
+    grid-area: socials;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-template-areas: "sText sText sText sText"
+                        "sli sli sli sli"
+                        "sem sem sem sem";
+    
+}
+
+#cText p {
+    margin: 0;
+}
+
+#sText {
+    grid-area: sText;
+}
+
+#sli {
+    grid-area: sli;
+}
+
+#sem {
+    grid-area: sem;
+}
+
+.fLinks {
+    display: flex;
+align-items: center;
+gap: 10px;
+justify-content: space-between;
+}
+
+.greyDash img {
+    width: 100%;
+    height: auto;
+}
+
+.extIcon img {
+    height: 2vh;
+    width: auto;
 }

@@ -6,7 +6,7 @@ body {
 p {
   color: #D8D2C3;
   font-family: "Iowan Old Style";
-  font-size: 1.7vmax;
+  font-size: 1.5vw;
   font-style: normal;
   font-weight: 400;
 }
@@ -58,23 +58,15 @@ h3 {
 li p {
   color: #AEAEAE;
   font-family: "Iowan Old Style";
-  font-size: 1.5vmax;
+  font-size: 1.6vmax;
 }
 
 .standardUL {
-  display: flex;
-  /*     flex-direction: column; */
-  justify-content: flex-end;
-  align-items: flex-start;
   list-style-image: url(../images/bullet1.svg);
 }
 
 .standardUL li {
-  padding: 10px 20px 20px 20px;
-  flex-direction: column;
-  align-self: flex-start;
-  gap: 5px;
-  flex: 1 0 0;
+  padding-left: 1em;
 }
 
 .myButton {
@@ -115,4 +107,103 @@ li p {
 
 .myDropdownItem a:hover {
   background-color: #FFBB25;
+}
+
+#protoCarousel2 {
+  padding-top: 7vw;
+}
+
+.realMyTab {
+  font-family: "Uncial Antiqua";
+  font-size: 3vw;
+  color: #FFBB25;
+}
+
+.realMyTab button {
+  color: #FFBB25;
+}
+
+.myImage img {
+  width: 100%;
+  padding: 2em;
+}
+
+.shiftOpacity {
+  opacity: 60%;
+}
+
+.subSection {
+  padding-top: 3vh;
+}
+
+/* Footer formatting */
+.contact {
+  width: 100%;
+  padding-top: 4vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 30% 70%;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  grid-template-areas: "header header header header header header header header header . . ." ". . . socials socials socials . quill quill . . .";
+}
+
+.contactGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cTitle {
+  grid-area: header;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  padding-bottom: 1vh;
+}
+
+#cQuill {
+  grid-area: quill;
+}
+
+#cText {
+  grid-area: socials;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  grid-template-areas: "sText sText sText sText" "sli sli sli sli" "sem sem sem sem";
+}
+
+#cText p {
+  margin: 0;
+}
+
+#sText {
+  grid-area: sText;
+}
+
+#sli {
+  grid-area: sli;
+}
+
+#sem {
+  grid-area: sem;
+}
+
+.fLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.greyDash img {
+  width: 100%;
+  height: auto;
+}
+
+.extIcon img {
+  height: 2vh;
+  width: auto;
 }/*# sourceMappingURL=style.css.map */
