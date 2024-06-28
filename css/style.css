@@ -6,7 +6,7 @@ body {
 p {
   color: #D8D2C3;
   font-family: "Iowan Old Style";
-  font-size: 1.4vw;
+  font-size: 1em;
   font-style: normal;
   font-weight: 400;
 }
@@ -24,7 +24,7 @@ h1 {
 h2 {
   color: white;
   font-family: "Uncial Antiqua";
-  font-size: 3.5vw;
+  font-size: 2.8vw;
   font-style: normal;
   display: inline;
   /*     line-height: 0%; */
@@ -34,12 +34,22 @@ h2 {
 h3 {
   color: #FFBB25;
   font-family: "Bellefair";
-  font-size: 3vw;
+  font-size: 2.7vw;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 28px */
   /*     margin: auto; */
   text-align: left;
+}
+
+h4 {
+  font-family: "Bellefair";
+  font-size: 2.4vw;
+  color: white;
+}
+
+.myGridSection {
+  align-items: center;
 }
 
 .myNav {
@@ -50,15 +60,20 @@ h3 {
 }
 
 .myTopContainer {
-  margin: 0;
-  padding: 0;
-  padding-top: 3vh;
+  /*     @include my-grid(); */
+  padding-top: 5vh;
+}
+
+.alignVert {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 li p {
   color: #AEAEAE;
   font-family: "Iowan Old Style";
-  font-size: 1.6vmax;
+  font-size: 0.9em;
 }
 
 .standardUL {
@@ -67,6 +82,22 @@ li p {
 
 .standardUL li {
   padding-left: 1em;
+}
+
+.biggerUL {
+  list-style-image: url(../images/bullet1.svg);
+}
+
+.biggerUL li {
+  padding-left: 1em;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+.biggerUL li p {
+  color: #D8D2C3;
+  font-family: "Iowan Old Style";
+  font-size: 1em;
 }
 
 .myButton {
@@ -80,6 +111,7 @@ li p {
   font-family: "Bellefair";
   font-size: 2vw;
   color: #FFBB25;
+  font-size: 1.3em;
 }
 
 .myNav a:active {
@@ -109,13 +141,18 @@ li p {
   background-color: #FFBB25;
 }
 
+/* Summary block */
+#summaryBlock {
+  margin-bottom: 3vh;
+}
+
 #protoCarousel2 {
-  padding-top: 7vw;
+  padding-top: 5.6vw;
 }
 
 .realMyTab {
   font-family: "Uncial Antiqua";
-  font-size: 3vw;
+  font-size: 2.7vw;
   color: #FFBB25;
 }
 
@@ -133,13 +170,67 @@ li p {
 }
 
 .subSection {
-  padding-top: 3vh;
+  padding-top: 5vh;
+}
+
+/* Break formatting */
+#break2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  grid-template-areas: "triangle1 . . star1 cunifText cunifText cunifText cunifText star2 . . triangle2";
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.breakStar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.breakStar img {
+  width: 90%;
+  height: auto;
+  padding: 20px;
+  /*     align-self: end; */
+  opacity: 30%;
+}
+
+#tri1 {
+  grid-area: triangle1;
+}
+
+#tri1 img {
+  rotate: 180deg;
+}
+
+#st1 {
+  grid-area: star1;
+}
+
+#cuniText {
+  grid-area: cunifText;
+  rotate: 180deg;
+}
+
+#cuniText img {
+  width: 100%;
+}
+
+#st2 {
+  grid-area: star2;
+}
+
+#tri2 {
+  grid-area: triangle2;
 }
 
 /* Footer formatting */
 .contact {
   width: 100%;
-  padding-top: 4vh;
+  padding-top: 1vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 30% 70%;

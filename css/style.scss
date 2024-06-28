@@ -10,15 +10,16 @@ $h3-font: "Bellefair";
 $p-font: "Iowan Old Style";
 
 $h1-size: 5vw;
-$h2-size: 3.5vw;
-$h3-size: 3vw;
+$h2-size: 2.8vw;
+$h3-size: 2.7vw;
 $h4-size: 2.4vw;
 $h5-size: 2vw;
-$p-size: 1.4vw;
-$sm-P-size: 1.6vmax;
+$nav-size: 1.3em;
+$p-size: 1em;
+$sm-P-size: 0.9em;
 $img-fill: 100%;
 
-$container-top-pad: 3vh;
+$container-top-pad: 5vh;
 
 
 @mixin my-grid {
@@ -52,7 +53,7 @@ padding: 0;
 
 body {
     background-color: $bg-color;
-    padding: 0px 75px 0px 75px;
+    padding: 0px 75px 0px 75px;  
 }
 p {
     color: $lt-smoke-grey;
@@ -91,6 +92,15 @@ h3 {
     text-align: left;
 }
 
+h4 {
+    font-family: $h3-font;
+    font-size: $h4-size;
+    color: white;
+}
+
+.myGridSection {
+    align-items: center;
+}
 
 .myNav {
     @include my-grid;
@@ -99,8 +109,14 @@ h3 {
 }
 
 .myTopContainer {
-    @include my-grid();
+/*     @include my-grid(); */
     padding-top: $container-top-pad;
+}
+
+.alignVert {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 li p {
@@ -117,6 +133,22 @@ li p {
     padding-left: 1em;
 }
 
+.biggerUL {
+    list-style-image: url(../images/bullet1.svg);
+}
+
+.biggerUL li {
+    padding-left: 1em;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.biggerUL li p {
+    color: $lt-smoke-grey;
+    font-family: $p-font;
+    font-size: $p-size;
+}
+
 .myButton {
     font-family: $h3-font;
     background-color: $tangerine;
@@ -126,6 +158,7 @@ li p {
 
 .myNav a {
  @include my-tab();
+ font-size: $nav-size;
 }
 
 .myNav a:active {
@@ -156,6 +189,11 @@ li p {
     background-color: $tangerine;
 }
 
+/* Summary block */
+#summaryBlock {
+     margin-bottom: 3vh;
+}
+
 #protoCarousel2 {
     padding-top: calc($h2-size + $h2-size);
 }
@@ -183,10 +221,64 @@ li p {
     padding-top: $container-top-pad;
 }
 
+/* Break formatting */
+#break2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    grid-template-areas: "triangle1 . . star1 cunifText cunifText cunifText cunifText star2 . . triangle2";
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.breakStar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breakStar img {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+/*     align-self: end; */
+    opacity: 30%;
+}
+
+#tri1 {
+    grid-area: triangle1;
+}
+
+#tri1 img {
+    rotate: 180deg;
+}
+
+#st1 {
+    grid-area: star1;
+}
+
+#cuniText {
+    grid-area: cunifText;
+    rotate: 180deg;
+}
+
+#cuniText img {
+    width: 100%;
+}
+
+
+#st2 {
+    grid-area: star2;
+}
+
+#tri2 {
+    grid-area: triangle2;
+}
+
 /* Footer formatting */
 .contact {
     width: 100%;
-    padding-top: 4vh;
+    padding-top: 1vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 30% 70%;
