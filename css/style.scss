@@ -1,8 +1,9 @@
-$bg-color: black;
+$body-bg: black;
 $tangerine: #FFBB25;
 $lt-smoke-grey: #D8D2C3;
 $md-grey: #AEAEAE;
 $dk-smoke-grey: #55534C;
+
 
 $h1-font: "Mrs Saint Delafield";
 $display-font: "Uncial Antiqua";
@@ -21,12 +22,18 @@ $img-fill: 100%;
 
 $container-top-pad: 5vh;
 
+$link-hover-color: $md-grey;
+
+
+$accordion-button-active-color:           shade-color($dk-smoke-grey, 10%);
+
+
 
 @mixin my-grid {
 $grid-gutter-width: 16px;
 $bs-gutter-x: 0;
-margin: 0;
-padding: 0;
+/* margin: 0; */
+/* padding: 0; */
 }
 
 @mixin my-ul {
@@ -52,8 +59,9 @@ padding: 0;
 }
 
 body {
-    background-color: $bg-color;
-    padding: 0px 75px 0px 75px;  
+    background-color: $body-bg;
+    padding: 0px 75px 0px 75px;
+    font-family: $p-font;  
 }
 p {
     color: $lt-smoke-grey;
@@ -177,6 +185,7 @@ li p {
     background-color: $tangerine;
 }
 
+
 .myCardSmol {
     background-color: $dk-smoke-grey;
 }
@@ -207,6 +216,7 @@ li p {
 .realMyTab button {
     color: $tangerine;
 }
+
 
 .myImage img {
     width: $img-fill;
