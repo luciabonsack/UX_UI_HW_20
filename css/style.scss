@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Newcomen";
+    src: url("../NewcomenRegular/font.woff") format('woff');
+  }
+
 $body-bg: black;
 $tangerine: #FFBB25;
 $lt-smoke-grey: #D8D2C3;
@@ -6,7 +11,7 @@ $dk-smoke-grey: #55534C;
 
 
 $h1-font: "Mrs Saint Delafield";
-$display-font: "Uncial Antiqua";
+$display-font: "Newcomen";
 $h3-font: "Bellefair";
 $p-font: "Iowan Old Style";
 
@@ -106,6 +111,42 @@ h4 {
     color: white;
 }
 
+.nearEmphasis {
+    display: inline;
+}
+
+.emphasis {
+    color: $tangerine;
+/*     font-weight: bold; */
+    display: inline;
+}
+
+.infoIcon {
+    display: inline;
+    height: calc($p-size * 1.7);
+    padding-right: .5em;
+}
+
+.myAccordion {
+    margin-top: $p-size;
+}
+
+
+.myAccordion button {
+    background-color: $lt-smoke-grey;
+    color: black;
+}
+
+.myAccordion button img {
+    color: $dk-smoke-grey;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: $tangerine;
+    box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
 .myGridSection {
     align-items: center;
 }
@@ -125,6 +166,10 @@ h4 {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+}
+
+ul {
+    list-style-image: url(../images/bullet1.svg)
 }
 
 li p {
