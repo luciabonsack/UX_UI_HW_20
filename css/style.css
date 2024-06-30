@@ -51,6 +51,7 @@ h4 {
   font-family: "Bellefair";
   font-size: 2.4vw;
   color: white;
+  text-align: center;
 }
 
 .nearEmphasis {
@@ -65,7 +66,7 @@ h4 {
 
 .infoIcon {
   display: inline;
-  height: 1.7em;
+  height: 1.3em;
   padding-right: 0.5em;
 }
 
@@ -112,6 +113,11 @@ h4 {
 
 ul {
   list-style-image: url(../images/bullet1.svg);
+  padding-top: 1em;
+}
+
+li {
+  padding-left: 1em;
 }
 
 li p {
@@ -207,6 +213,17 @@ li p {
 .myImage img {
   width: 100%;
   padding: 2em;
+}
+
+.myImageSmol img {
+  width: 60%;
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shiftOpacity {
@@ -341,4 +358,12 @@ li p {
 .extIcon img {
   height: 2vh;
   width: auto;
+}
+
+.line {
+  flex-grow: 1;
+  height: 0px;
+  border-style: solid;
+  border-color: #FFBB25;
+  border-width: 2px;
 }/*# sourceMappingURL=style.css.map */
